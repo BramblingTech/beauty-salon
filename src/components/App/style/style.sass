@@ -1,0 +1,328 @@
+@import 'grid'
+@import 'font'
+$default-ui-system-fonts: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif
+$color-black: #000000
+$color-dark: linear-gradient(180deg, #202121 11.17%, #1C1C1D 31.93%, #0F1012 60.87%, #020203 87.01%)
+$color-gold: linear-gradient(90deg, #924D3D 0%, #9F5D4B 4.48%, #B47363 9.95%, #C68877 15.73%, #F2BBA8 27.49%, #F9C4B3 29.85%, #F7B8A7 50.24%, #946051 99.99%)
+$color-white: #FFFFFF
+$color-rose: #F2BBA8
+%font-body-small
+  font-family: 'Montserrat', $default-ui-system-fonts
+  font-style: normal
+  font-weight: 300
+  font-size: 14px
+  line-height: 140%
+  color: $color-white
+%font-buttons
+  font-family: 'Montserrat', $default-ui-system-fonts
+  font-style: normal
+  font-weight: 500
+  font-size: 12px
+  line-height: 15px
+  color: $color-white
+  text-transform: uppercase
+%font-inbox
+  font-family: 'Montserrat', $default-ui-system-fonts
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 17px
+  color: $color-white
+  letter-spacing: 0.05em
+  text-transform: uppercase
+%font-heading1
+  font-family: 'Baskerville', $default-ui-system-fonts
+  font-style: normal
+  font-weight: normal
+  font-size: 48px
+  line-height: 140%
+  color: $color-white
+  @media only screen and (max-width: 1020px)
+    font-size: 36px
+%font-heading2
+  font-family: 'Baskerville', $default-ui-system-fonts
+  font-style: normal
+  font-weight: normal
+  font-size: 36px
+  line-height: 140%
+  color: $color-white
+  @media only screen and (max-width: 1020px)
+    font-size: 24px
+%font-heading3
+  font-family: 'Montserrat', $default-ui-system-fonts
+  font-style: normal
+  font-weight: normal
+  font-size: 24px
+  line-height: 130%
+  color: $color-white
+  @media only screen and (max-width: 1020px)
+    font-size: 16px
+%font-heading-hero
+  font-family: 'Baskerville', $default-ui-system-fonts
+  font-style: normal
+  font-weight: 600
+  font-size: 52px
+  line-height: 140%
+  color: $color-white
+  @media only screen and (max-width: 1020px)
+    font-size: 38px
+%font-body
+  font-family: 'Montserrat', $default-ui-system-fonts
+  font-style: normal
+  font-weight: 300
+  font-size: 18px
+  line-height: 160%
+  color: $color-white
+  @media only screen and (max-width: 1020px)
+    font-size: 16px
+%font-body2
+  font-family: 'Montserrat', $default-ui-system-fonts
+  font-style: normal
+  font-weight: normal
+  font-size: 18px
+  line-height: 130%
+  color: $color-white
+  @media only screen and (max-width: 1020px)
+    font-size: 14px
+%font-menu
+  font-family: 'Baskerville', $default-ui-system-fonts
+  font-style: normal
+  font-weight: normal
+  font-size: 18px
+  line-height: 140%
+  color: $color-white
+body
+  background: $color-black
+.swiper-slide
+  -webkit-backface-visibility: hidden
+  -webkit-transform: translate3d(0,0,0)
+.swiper-wrapper
+  -webkit-transform-style: preserve-3d
+.services, .subject, .works, .offers, .contact
+  background: $color-dark
+.header__menu, .footer__menu
+  li
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      bottom: 1px
+      left: 50%
+      transform: translateX(-50%)
+      width: 0
+      height: 1px
+      background: $color-gold
+      transition: .2s width linear
+      @media only screen and (max-width: 1020px)
+        transition: 0s
+    a
+      @extend %font-menu
+      transition: .2s linear
+      @media only screen and (max-width: 1020px)
+        transition: 0s
+    &:hover
+      &::after
+        width: 100%
+      a, span
+        background: $color-gold
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+.header__menu
+  li
+    a
+      @media only screen and (max-width: 1020px)
+        font-size: 24px
+h1
+  @extend %font-heading-hero
+h2
+  @extend %font-heading1
+h3
+  @extend %font-heading1
+h4
+  @extend %font-heading2
+p
+  @extend %font-body
+.services__text
+  @media only screen and (max-width: 760px)
+    font-size: 14px
+.bigger-text
+  @extend %font-heading3
+.container-limit__text
+  font-family: 'Montserrat', $default-ui-system-fonts
+.normal-text
+  @extend %font-body2
+.error__text
+  @extend %font-heading2
+.text-hightlight
+  color: $color-rose
+  font-style: italic
+input, textarea
+  @extend %font-inbox
+input:not([type="submit"]):-webkit-autofill
+  -webkit-box-shadow: inset 0 0 0 50px #201F1E!important
+  -webkit-text-fill-color: $color-white!important
+  @extend %font-inbox
+  color: $color-white
+.cookies__text
+  @extend %font-buttons
+  color: $color-black
+  text-transform: none
+  margin-bottom: 16px
+.cookies__button
+  @extend %font-buttons
+  color: #000000
+  text-decoration: none
+  position: relative
+  padding: 0
+  &::after
+    content: ''
+    position: absolute
+    bottom: 1px
+    left: 0
+    width: 100%
+    height: 1px
+    background: $color-black
+    transition: .2s background linear
+    @media only screen and (max-width: 1020px)
+      transition: 0s
+  &:hover
+    background: $color-gold
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    &::after
+      background: $color-gold
+  &:active
+    color: $color-rose
+    background: none
+    -webkit-background-clip: unset
+    -webkit-text-fill-color: unset
+    &::after
+      background: $color-rose
+label
+  @extend %font-inbox
+.services__link
+  @extend %font-buttons
+  text-decoration: none!important
+  margin-top: 30px
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    bottom: 1px
+    left: 0
+    width: 100%
+    height: 1px
+    background: $color-white
+    transition: .2s background linear
+    @media only screen and (max-width: 1020px)
+      transition: 0s
+  &:hover
+    background: $color-gold
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    &::after
+      background: $color-gold
+  &:active
+    color: $color-rose
+    background: none
+    -webkit-background-clip: unset
+    -webkit-text-fill-color: unset
+    &::after
+      background: $color-rose
+.site-button
+  @extend %font-buttons
+  width: 210px
+  height: 46px
+  display: flex
+  align-items: center
+  justify-content: center
+  border: none
+  box-shadow: none
+  background: none
+  cursor: pointer
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  padding: 0
+  border: 2px solid
+  border-image-slice: 1
+  border-image-source: $color-gold
+  position: relative
+  background: transparent
+  transition: .2s color linear, .2s background linear
+  @media only screen and (max-width: 1020px)
+      transition: 0s
+  span
+    z-index: 1
+    position: relative
+  &::before
+    content: ''
+    position: absolute
+    height: calc(100% - 2px)
+    width: calc(100% + 10px)
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border: 2px solid
+    border-image-slice: 1
+    border-image-source: $color-gold
+    transition: .2s background linear
+    @media only screen and (max-width: 1020px)
+      transition: 0s
+  &:hover
+    color: $color-black
+    &::before
+      background: $color-gold
+  &:active
+    border: 2px solid $color-rose
+    color: $color-rose
+    @media only screen and (max-width: 1020px)
+      border: 2px solid
+      border-image-slice: 1
+      border-image-source: $color-gold
+      color: $color-black
+    &::before
+      border: 2px solid $color-rose
+      background: transparent
+      @media only screen and (max-width: 1020px)
+        border: 2px solid
+        border-image-slice: 1
+        border-image-source: $color-gold
+        background: $color-gold
+.go-top
+  position: fixed
+  bottom: 94px
+  right: 10%
+  @media only screen and (max-width: 1100px)
+    right: 10px
+  @media only screen and (max-width: 800px)
+    bottom: 150px
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 32px
+  height: 32px
+  z-index: 2
+  background: $color-gold
+  border: none
+  box-shadow: none
+  padding: 0
+  cursor: default
+  opacity: 0
+  transition: .2s opacity linear
+  &:hover
+    background: $color-white
+  &:active
+    background: $color-rose
+.go-top_active
+  opacity: 1
+  cursor: pointer
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+.fade-up
+  opacity: 0
+  visibility: hidden
+  transform: translateY(50px)
+  transition-delay: .2s
+  transition: .5s transform  ease, .5s opacity  ease
+.fade-up_active
+  opacity: 1
+  visibility: visible
+  transform: translateY(0)

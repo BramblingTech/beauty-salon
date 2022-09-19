@@ -1,0 +1,122 @@
+$color-black: #000000
+.services
+    height: 900px
+.services__wrap
+    display: flex
+    height: 100%
+    align-items: flex-end
+.services__image-slider
+    margin-right: 0
+    margin-left: 0
+    width: calc(50vw + 175px)
+    height: 100%
+.services__container
+    z-index: 1
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+.services__wrap-slider
+    position: relative
+    background: $color-black
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.12), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0862625), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0715329), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.06), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0484671), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0337375)
+    width: 556px
+    margin-left: auto
+    margin-right: 0
+.services__arrows
+    position: absolute
+    bottom: 41px
+    left: 50%
+    transform: translateX(-50%)
+.services__arrow
+  border: none
+  background: transparent
+  box-shadow: none
+  cursor: pointer
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  padding: 0
+  height: 32px
+  width: 32px
+  top: auto
+  bottom: 41px
+  &::after
+    display: none
+  &:hover svg path
+    fill: #FFFFFF
+  &:active svg path
+    fill: #F2BBA8
+.services__arrow_left
+  left: 50%
+  transform: translateX(calc(-50% - 63px))
+.services__arrow_right
+  right: 50%
+  transform: translateX(calc(50% + 63px))
+.services__text-slide
+    padding: 50px 62px 135px
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+.services__title
+  text-align: center
+  padding-bottom: 34px
+  margin-bottom: 40px
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    width: 35px
+    height: 45px
+    background: url('/img/romb-title-service.svg') no-repeat center center
+  &::before
+    content: ''
+    position: absolute
+    bottom:  39px
+    left: 0
+    width: 100%
+    height: 0.7px
+    background: linear-gradient(90deg, #924D3D 0%, #9F5D4B 4.48%, #B47363 9.95%, #C68877 15.73%, #F2BBA8 27.49%, #F9C4B3 29.85%, #F7B8A7 50.25%, #946051 100%)
+.services__text
+  text-align: center
+.services__button
+    margin-left: 43px
+    margin-bottom: 30px
+@media only screen and (max-width: 1020px)
+  .services
+    height: 736px
+  .services__wrap
+    flex-direction: column
+    align-items: flex-end
+  .services__image-slider
+    width: 100%
+    height: 607px
+  .services__button
+    margin-bottom: 0
+    margin-left: 0
+    margin-right: 77px
+    margin-top: 38px
+  .services__container
+    right: 0
+    left: auto
+    transform: translateY(-61%)
+    padding: 0
+@media only screen and (max-width: 760px)
+  .services__wrap-slider
+    width: 352px
+  .services__text-slide
+    padding: 40px 15px 94px
+  .services__title
+    margin-bottom: 25px
+  .services__arrow svg
+    width: 24px
+    height: 24px
+  .services__arrow_left
+    margin-right: 92px
+@media only screen and (max-width: 370px)
+  .services__wrap-slider
+    width: 290px
+  .services__arrow_left
+    margin-right: 50px

@@ -1,0 +1,43 @@
+.offers
+  padding-top: 120px
+  padding-bottom: 131px
+  &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 80px
+        height: 80px
+        background: url('/img/romb1.svg') no-repeat center center
+        background-size: 100%
+.offers__title
+  text-align: center
+  padding-bottom: 34px
+  margin-bottom: 60px
+  background: url('/img/romb-title2.svg') no-repeat center bottom
+  background-size: 100% 34px
+.offers__image
+  height: 286px
+  margin-bottom: 30px
+.offers__name
+  text-align: center
+  margin-bottom: 10px
+.offers__text
+  text-align: center
+@media only screen and (max-width: 760px)
+  .offers
+    padding-top: 80px
+    padding-bottom: 190px
+    &::after
+      height: 77px
+      width: 77px
+  .offers__image
+    height: 225px
+    margin-bottom: 10px
+  .offers__title
+    width: max-content
+    margin: 0 auto 60px
+    padding-bottom: 20px
+  .offers__text
+    padding: 0 10px

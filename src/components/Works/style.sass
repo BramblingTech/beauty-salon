@@ -1,0 +1,109 @@
+$color-gold: linear-gradient(90deg, #924D3D 0%, #9F5D4B 4.48%, #B47363 9.95%, #C68877 15.73%, #F2BBA8 27.49%, #F9C4B3 29.85%, #F7B8A7 50.24%, #946051 99.99%)
+.works
+  padding: 120px 0 184px
+.works__title
+  text-align: center
+  margin-bottom: 60px
+.works__wrap
+  position: relative
+  padding-top: 64px
+  padding-bottom: 50px
+  &::before
+    content: ''
+    position: absolute
+    top: 15px
+    height: calc( 100% - 15px )
+    width: calc( 100% - 130px )
+    left: 50%
+    transform: translateX(-50%)
+    border: 2px solid
+    border-image-slice: 1
+    border-image-source: $color-gold
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    width: 32.3px
+    height: 32.3px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 1
+    background: url('/img/works-back.svg') no-repeat
+.works__image_background
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  height: 33px
+  background: #1c1c1d
+  z-index: 1
+  img
+    object-fit: contain
+.works__arrow_prev, .works__arrow_next
+  width: 60px
+  height: 60px
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  transition: .2s opacity linear
+  svg
+    min-width: 60px
+    height: 60px
+  &::after
+    display: none
+  &.swiper-button-disabled
+    opacity: 0
+  &:hover svg path
+    fill: url(#paint0_linear)
+  &:active svg path
+    fill: #F2BBA8
+.works__arrow_prev
+  left: 80px
+.works__arrow_next
+  right: 80px
+.works__slider
+  height: 255px!important
+.eapps-instagram-feed-posts-item-image-wrapper
+  padding-top: 257px!important
+.works__slide, .eapps-instagram-feed-container, .eapps-instagram-feed-content, .eapps-instagram-feed-posts-container, .eapps-instagram-feed-posts-slider, .eapps-instagram-feed-posts-slider-inner, .eapps-instagram-feed-posts-view, .eapps-instagram-feed-posts-item-template-tile, .eapps-instagram-feed-posts-item-link, .eapps-instagram-feed-posts-item-media, .eapps-instagram-feed-posts-item-image-wrapper img, .eapps-instagram-feed-posts-item-image-landscape .eapps-instagram-feed-posts-item-image, #eapps-instagram-feed-1
+  height: 100%!important
+@media only screen and (max-width: 1100px)
+  .works__arrow_prev
+    left: 10px
+  .works__arrow_next
+    right: 10px
+@media only screen and (max-width: 1020px)
+  .works__image_background
+    object-fit: none
+@media only screen and (max-width: 766px)
+  .works
+    padding: 80px 0 70px
+  .works__title
+    margin-bottom: 85px
+  .works__wrap
+    padding-top: 73px
+    padding-bottom: 41px
+    &::before
+      width: calc( 100% - 60px)
+      height: calc( 100% - 138px)
+  .works__slider
+    height: 378px!important
+    padding-bottom: 123px
+    .swiper-slide
+      width: 255px
+  .works__arrow_prev
+    left: 50%
+    transform: translateX(calc(-50% - 30px))
+  .works__arrow_next
+    right: 50%
+    transform: translateX(calc(50% + 30px))
+  .works__arrow_prev, .works__arrow_next
+    width: 32px
+    height: 32px
+    top: auto
+    bottom: 0
+    svg
+      min-width: 32px
+      height: 32px
+      path
+        fill: url(#paint0_linear)
+    &.swiper-button-disabled
+      opacity: 0.4

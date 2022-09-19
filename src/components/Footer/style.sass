@@ -1,0 +1,68 @@
+.footer
+  height: 100px
+  background: #000000
+  z-index: 1
+  position: relative
+.footer__container
+  height: 100%
+  position: relative
+  padding-right: 14em!important
+  padding-left: 16.35em!important
+.footer__logo-wrap
+  width: 100px
+  height: 100%
+  position: absolute
+  top: 0
+  left: 50%
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.12), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0862625), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0715329), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.06), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0484671), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0337375)
+  transform: translateX(-50%)
+  z-index: 2
+.footer__logo
+  object-fit: contain
+.footer__menu
+  display: flex
+  height: 100%
+  align-items: center
+  li
+    margin-right: 40px
+    &:nth-child(2)
+      margin-right: auto
+    &:last-child
+      margin-right: 0
+@media only screen and (max-width: 1300px)
+  .footer__container
+    padding-right: 7em!important
+    padding-left: 9.35em!important
+@media only screen and (max-width: 1020px)
+  .footer
+    height: 120px
+    padding-top: 20px
+  .footer__container
+    padding-right: 15px!important
+    padding-left: 15px!important
+    display: flex
+    flex-direction: column
+    align-items: center
+  .footer__logo-wrap
+    position: relative
+    top: auto
+    left: auto
+    transform: none
+    display: flex
+    width: 60px
+    height: 60px
+    order: 1
+  .footer__logo
+    min-width: 60px
+    min-height: 60px
+  .footer__menu
+    width: 100%
+    justify-content: space-between
+    margin-bottom: 15px
+    li
+      margin-right: 15px
+      &:nth-child(2)
+        margin-right: 15px
+      &:last-child
+        margin-right: 0
+

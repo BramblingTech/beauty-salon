@@ -1,0 +1,79 @@
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: rgba(0, 0, 0, 0.5)
+  z-index: -1
+  opacity: 0
+  transition: .2s opacity linear
+.modal_active
+  opacity: 1
+  z-index: 4
+.modal__window
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  height: 597px
+  width: 556px
+  background: linear-gradient(180deg, #202121 11.17%, #1C1C1D 31.93%, #0F1012 60.87%, #020203 87.01%)
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.12), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0862625), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0715329), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.06), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0484671), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0337375)
+  padding: 60px 55px 85px
+.modal__title
+  text-align: center
+  margin-bottom: 60px
+.modal__close
+  position: absolute
+  top: 20px
+  right: 20px
+  width: 25px
+  height: 25px
+  cursor: pointer
+  display: flex
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+.modal__close-wrap
+  position: relative
+  width: 100%
+  height: 100%
+.modal__close-line
+  position: absolute
+  top: 50%
+  left: 50%
+  height: 1px
+  width: 100%
+  background: #FFFFFF
+.modal__close-line_1
+  transform: translate(-50%, -50%) rotate(45deg)
+.modal__close-line_2
+  transform: translate(-50%, -50%) rotate(-45deg)
+.modal__close:hover
+  .modal__close-line
+    background: linear-gradient(90deg, #924D3D 0%, #9F5D4B 4.48%, #B47363 9.95%, #C68877 15.73%, #F2BBA8 27.49%, #F9C4B3 29.85%, #F7B8A7 50.24%, #946051 99.99%)
+@media only screen and (max-width: 600px)
+  .modal__window
+    width: 320px
+    padding: 40px 15px 40px
+    height: auto
+  .modal__title
+    margin-bottom: 40px
+@media only screen and (max-width: 320px)
+  .modal__window
+    width: 100%
+@media only screen and (max-height: 510px)
+  .modal
+    overflow: auto
+  .modal__window
+    top: 0
+    transform: translateX(-50%)
+
+@media only screen and (max-width:750px) and (max-height: 420px)
+  .modal__window
+    padding: 20px 40px
+  .modal__title
+    margin-bottom: 20px
+  .container-limit_textarea
+    height: 76px
+  .modal__window
+    height: auto
